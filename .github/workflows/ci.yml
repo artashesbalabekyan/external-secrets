@@ -6,7 +6,7 @@ on:
       - main
       - release-*
       - e2e-test
-  pull_request: {}
+  pull_request: {} 
 
 env:
   # Common versions

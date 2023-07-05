@@ -1,4 +1,6 @@
 on:
+  repository_dispatch:
+    types: [ok-to-test-managed-command]
   push:
     branches:
       - main
@@ -65,6 +67,7 @@ name: managed e2e tests
 jobs:
   integration-trusted:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.actor !='dependabot[bot]'
     steps:
 
     - name: Branch based PR checkout
@@ -80,6 +83,7 @@ jobs:
 
   integration-managed:
     runs-on: ubuntu-latest
+    if: github.event_name == 'repository_dispatch'
 
     steps:
 

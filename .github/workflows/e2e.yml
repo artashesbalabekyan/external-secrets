@@ -56,7 +56,6 @@ jobs:
 
   integration-trusted:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.actor !='dependabot[bot]'
     steps:
 
     - name: Branch based PR checkout
@@ -70,7 +69,6 @@ jobs:
   # Repo owner has commented /ok-to-test on a (fork-based) pull request
   integration-fork:
     runs-on: ubuntu-latest
-    if: github.event_name == 'repository_dispatch'
     steps:
 
     # Check out merge commit

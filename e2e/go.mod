@@ -42,6 +42,7 @@ require (
 	github.com/akeylesslabs/akeyless-go-cloud-id v0.3.4
 	github.com/akeylesslabs/akeyless-go/v3 v3.3.9
 	github.com/aliyun/alibaba-cloud-sdk-go v1.62.271
+	github.com/artashesbalabekyan/barbican-sdk-go v1.2.0
 	github.com/aws/aws-sdk-go v1.44.289
 	github.com/external-secrets/external-secrets v0.0.0
 	github.com/fluxcd/helm-controller/api v0.22.2
@@ -67,6 +68,7 @@ require (
 )
 
 require (
+	aead.dev/mem v0.2.0 // indirect
 	cloud.google.com/go/compute v1.20.1 // indirect
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	cloud.google.com/go/iam v1.1.1 // indirect

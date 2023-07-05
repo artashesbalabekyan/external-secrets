@@ -4,13 +4,6 @@ description: "runs our e2e test suite"
 runs:
   using: composite
   steps:
-
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        role-to-assume: ${{ env.AWS_OIDC_ROLE_ARN }}
-        aws-region: ${{ env.AWS_REGION }}
-
     - name: Setup Go
       uses: actions/setup-go@v3
       with:

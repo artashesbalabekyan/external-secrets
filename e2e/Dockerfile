@@ -1,4 +1,4 @@
-ARG GO_VERSION=1.19
+ARG GO_VERSION=1.20
 FROM golang:$GO_VERSION-buster as builder
 
 ENV KUBECTL_VERSION="v1.24.3"
@@ -17,7 +17,8 @@ COPY . .
 WORKDIR /usr/src/app/e2e
 RUN make e2e-bin
 
-FROM alpine:3.15.0
+FROM alpine:latest
+RUN apk add gcompat 
 RUN apk add -U --no-cache \
     ca-certificates \
     bash \

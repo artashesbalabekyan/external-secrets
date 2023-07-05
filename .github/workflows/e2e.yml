@@ -1,8 +1,5 @@
 # Run secret-dependent e2e tests only after /ok-to-test approval
 on:
-  pull_request:
-  repository_dispatch:
-    types: [ok-to-test-command]
   push:
     branches:
       - main

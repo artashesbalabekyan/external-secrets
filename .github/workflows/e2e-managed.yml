@@ -1,6 +1,4 @@
 on:
-  repository_dispatch:
-    types: [ok-to-test-managed-command]
   push:
     branches:
       - main

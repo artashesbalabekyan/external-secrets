@@ -55,7 +55,7 @@ env:
 jobs:
 
   integration-trusted:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
 
     - name: Branch based PR checkout
@@ -68,7 +68,7 @@ jobs:
 
   # Repo owner has commented /ok-to-test on a (fork-based) pull request
   integration-fork:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
 
     # Check out merge commit

@@ -2,7 +2,6 @@ name: "e2e"
 description: "runs our e2e test suite"
 
 runs:
-  on: self-hosted
   using: composite
   steps:
 
